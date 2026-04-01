@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analyze Skin - AI Skin Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <a href="index.html" class="back-btn">← Back</a>
+  <div class="progress-bar"><div class="progress-fill" style="width: 50%" id="progressBar"></div></div>
+
+  <div class="form-header">
+    <h2>Tell us about your skin</h2>
+    <p>Answer honestly — the more detail you give, the better your analysis.</p>
+  </div>
+
+  <div class="form-grid">
+    <span class="section-title">About you</span>
+
+    <div class="form-group">
+      <label>Age range</label>
+      <select id="age">
+        <option value="">Select age range</option>
+        <option>13–17</option><option>18–24</option><option>25–34</option>
+        <option>35–44</option><option>45–54</option><option>55+</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Gender (affects hormones)</label>
+      <select id="gender">
+        <option value="">Select</option>
+        <option>Female</option><option>Male</option><option>Non-binary</option><option>Prefer not to say</option>
+      </select>
+    </div>
+
+    <span class="section-title">Your skin</span>
+
+    <div class="form-group">
+      <label>Skin type</label>
+      <select id="skinType">
+        <option value="">Select skin type</option>
+        <option>Oily</option><option>Dry</option><option>Combination</option>
+        <option>Normal</option><option>Sensitive</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Skin tone</label>
+      <select id="skinTone">
+        <option value="">Select skin tone</option>
+        <option>Very fair (Type I)</option><option>Fair (Type II)</option>
+        <option>Medium (Type III)</option><option>Olive (Type IV)</option>
+        <option>Brown (Type V)</option><option>Deep (Type VI)</option>
+      </select>
+    </div>
+
+    <div class="form-group full">
+      <label>Main skin concerns (select all that apply)</label>
+      <select id="concerns">
+        <option value="">Select primary concern</option>
+        <option>Acne / breakouts</option><option>Dryness / flakiness</option>
+        <option>Oiliness / shine</option><option>Pigmentation / dark spots</option>
+        <option>Anti-aging / wrinkles</option><option>Redness / rosacea</option>
+        <option>Uneven texture</option><option>Dullness</option>
+      </select>
+    </div>
+
+    <span class="section-title">Lifestyle & environment</span>
+
+    <div class="form-group">
+      <label>Diet type</label>
+      <select id="diet">
+        <option value="">Select diet</option>
+        <option>Balanced / healthy</option><option>High sugar / processed</option>
+        <option>Dairy-heavy</option><option>Plant-based / vegan</option>
+        <option>High protein / gym-focused</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Climate you live in</label>
+      <select id="climate">
+        <option value="">Select climate</option>
+        <option>Hot & humid</option><option>Hot & dry</option>
+        <option>Temperate / mild</option><option>Cold & dry</option>
+        <option>Tropical</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Hormonal status</label>
+      <select id="hormonal">
+        <option value="">Select status</option>
+        <option>Regular cycles, no issues</option><option>PCOS / hormonal acne</option>
+        <option>Pregnant / postpartum</option><option>Menopause / perimenopause</option>
+        <option>On hormonal contraception</option><option>Not applicable</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Water intake</label>
+      <select id="water">
+        <option value="">Select</option>
+        <option>Less than 1L/day</option><option>1–2L/day</option>
+        <option>2–3L/day</option><option>3L+ per day</option>
+      </select>
+    </div>
+
+    <span class="section-title">Skincare budget</span>
+
+    <div class="form-group full">
+      <label>Monthly skincare budget (INR)</label>
+      <select id="budget">
+        <option value="">Select budget</option>
+        <option>Under ₹1500 (drugstore)</option><option>₹1500–₹4000 (mid-range)</option>
+        <option>₹4000–₹8000 (premium)</option><option>₹8000–₹16000 (luxury)</option>
+        <option>₹16000+ (ultra-premium)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="error-msg" id="errorMsg">Please fill in all fields before analyzing.</div>
+
+  <button class="analyze-btn" id="analyzeBtn" onclick="runAnalysis()">Analyze my skin →</button>
+
+  <p class="disclaimer" style="text-align:left; margin-top:1rem;">⚠️ Not medical advice. Consult a dermatologist for serious conditions.</p>
+</div>
+
+<script>
+  const fields = ['age','gender','skinType','skinTone','concerns','diet','climate','hormonal','water','budget'];
+  
+  // optionally load draft payload if they pressed back
+  window.onload = () => {
+    try {
+      const saved = sessionStorage.getItem('skin_userdata');
+      if (saved) {
+        const d = JSON.parse(saved);
+        fields.forEach(f => {
+            if (d[f]) document.getElementById(f).value = d[f];
+        });
+      }
+    } catch(e) {}
+  };
+
+  function validate() {
+    for (let f of fields) {
+      if (!document.getElementById(f).value) return false;
+    }
+    return true;
+  }
+
+  function getFormData() {
+    const d = {};
+    fields.forEach(f => d[f] = document.getElementById(f).value);
+    return d;
+  }
+
+  function runAnalysis() {
+    const err = document.getElementById('errorMsg');
+    if (!validate()) { 
+        err.classList.add('visible'); 
+        return; 
+    }
+    err.classList.remove('visible');
+
+    const userData = getFormData();
+    sessionStorage.setItem('skin_userdata', JSON.stringify(userData));
+    window.location.href = 'results.html';
+  }
+</script>
+</body>
+</html>
