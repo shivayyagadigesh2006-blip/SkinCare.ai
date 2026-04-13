@@ -93,8 +93,19 @@
     document.getElementById('userSummaryLine').textContent =
       `${userData.age} · ${userData.skinType} skin · ${userData.skinTone} · ${userData.climate} climate · Budget: ${userData.budget}`;
 
+    const brands = ["Minimalist", "The Ordinary", "The Derma Co", "Dot & Key", "CeraVe", "Cetaphil", "Neutrogena", "Plum", "Mamaearth", "Deconstruct", "Re'equil", "Innisfree", "Benton", "LANEIGE", "Paula's Choice", "Dr. Sheth's", "Kiehl's", "Cosrx", "Simple", "Biotique", "Forest Essentials", "Kama Ayurveda", "Fixderma", "La Shield", "Bioderma", "Sebamed", "Clinique"];
+    function highlightBrands(text) {
+      if (!text) return "";
+      let highlighted = text;
+      brands.forEach(brand => {
+        const regex = new RegExp(`\\b${brand}\\b`, 'g');
+        highlighted = highlighted.replace(regex, `<span class="brand-highlight">${brand}</span>`);
+      });
+      return highlighted;
+    }
+
     try {
-      const response = await fetch('http://localhost:5000/analyze', {
+      const response = await fetch('/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userData)
@@ -114,11 +125,11 @@
         parsed.metrics.sensitivity
       );
 
-      document.getElementById('analysisBody').textContent = parsed.analysis;
-      document.getElementById('routineBody').textContent = parsed.routine;
-      document.getElementById('explainBody').textContent = parsed.explanation;
-      document.getElementById('tipsBody').textContent = parsed.tips;
-      document.getElementById('fairnessBody').textContent = parsed.fairness;
+      document.getElementById('analysisBody').innerHTML = highlightBrands(parsed.analysis);
+      document.getElementById('routineBody').innerHTML = highlightBrands(parsed.routine);
+      document.getElementById('explainBody').innerHTML = highlightBrands(parsed.explanation);
+      document.getElementById('tipsBody').innerHTML = highlightBrands(parsed.tips);
+      document.getElementById('fairnessBody').innerHTML = highlightBrands(parsed.fairness);
 
       document.getElementById('loadingState').style.display = 'none';
       document.getElementById('resultContent').classList.add('visible');

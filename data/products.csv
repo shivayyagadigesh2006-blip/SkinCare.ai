@@ -1,601 +1,128 @@
-Product_ID,Brand,Price,Ingredients
-0,LuxuryGlow,52,Retinol
-1,DermaCare,134,Hyaluronic_Acid
-2,LuxuryGlow,125,Ceramides|Salicylic_Acid|Retinol
-3,InfluenceX,86,Salicylic_Acid
-4,LuxuryGlow,36,Hyaluronic_Acid
-5,ClinicalSkin,124,Salicylic_Acid|Hyaluronic_Acid|Retinol
-6,ClinicalSkin,13,Hyaluronic_Acid|Vitamin_C
-7,ClinicalSkin,40,Salicylic_Acid|Hyaluronic_Acid
-8,InfluenceX,69,Retinol|Hyaluronic_Acid
-9,DermaCare,99,Salicylic_Acid|Ceramides
-10,InfluenceX,46,Retinol
-11,BudgetBeauty,74,Retinol|Salicylic_Acid|Ceramides
-12,InfluenceX,149,Salicylic_Acid|Vitamin_C|Ceramides
-13,ClinicalSkin,51,Ceramides|Retinol
-14,ClinicalSkin,118,Salicylic_Acid
-15,LuxuryGlow,89,Hyaluronic_Acid|Retinol|Salicylic_Acid
-16,DermaCare,132,Vitamin_C
-17,BudgetBeauty,97,Retinol|Hyaluronic_Acid
-18,BudgetBeauty,50,Hyaluronic_Acid|Retinol
-19,LuxuryGlow,46,Hyaluronic_Acid|Ceramides|Salicylic_Acid
-20,InfluenceX,52,Retinol|Hyaluronic_Acid
-21,BudgetBeauty,130,Hyaluronic_Acid
-22,LuxuryGlow,145,Vitamin_C|Retinol
-23,LuxuryGlow,132,Ceramides
-24,BudgetBeauty,89,Vitamin_C
-25,InfluenceX,132,Vitamin_C|Hyaluronic_Acid|Ceramides
-26,DermaCare,18,Ceramides
-27,ClinicalSkin,97,Ceramides|Vitamin_C
-28,ClinicalSkin,48,Retinol|Hyaluronic_Acid
-29,DermaCare,138,Vitamin_C|Salicylic_Acid|Ceramides
-30,LuxuryGlow,140,Hyaluronic_Acid
-31,InfluenceX,146,Salicylic_Acid|Vitamin_C|Hyaluronic_Acid
-32,ClinicalSkin,119,Ceramides|Retinol
-33,ClinicalSkin,62,Salicylic_Acid
-34,ClinicalSkin,20,Retinol|Salicylic_Acid
-35,BudgetBeauty,50,Hyaluronic_Acid|Vitamin_C
-36,LuxuryGlow,118,Retinol|Hyaluronic_Acid|Ceramides
-37,LuxuryGlow,12,Retinol|Hyaluronic_Acid|Salicylic_Acid
-38,BudgetBeauty,108,Ceramides
-39,ClinicalSkin,89,Ceramides
-40,BudgetBeauty,23,Salicylic_Acid|Ceramides
-41,BudgetBeauty,109,Hyaluronic_Acid|Salicylic_Acid
-42,DermaCare,76,Salicylic_Acid|Ceramides|Retinol
-43,InfluenceX,121,Ceramides
-44,DermaCare,133,Vitamin_C
-45,ClinicalSkin,143,Retinol
-46,ClinicalSkin,25,Vitamin_C|Hyaluronic_Acid|Retinol
-47,DermaCare,113,Retinol|Vitamin_C|Ceramides
-48,BudgetBeauty,43,Ceramides|Vitamin_C
-49,LuxuryGlow,105,Hyaluronic_Acid
-50,LuxuryGlow,106,Salicylic_Acid|Hyaluronic_Acid
-51,ClinicalSkin,62,Salicylic_Acid
-52,LuxuryGlow,10,Salicylic_Acid|Hyaluronic_Acid|Ceramides
-53,LuxuryGlow,100,Salicylic_Acid|Hyaluronic_Acid
-54,BudgetBeauty,88,Vitamin_C|Hyaluronic_Acid|Retinol
-55,DermaCare,25,Ceramides|Vitamin_C|Salicylic_Acid
-56,InfluenceX,104,Hyaluronic_Acid|Salicylic_Acid
-57,LuxuryGlow,146,Vitamin_C|Retinol|Hyaluronic_Acid
-58,InfluenceX,84,Salicylic_Acid|Ceramides
-59,LuxuryGlow,28,Retinol|Salicylic_Acid
-60,DermaCare,18,Hyaluronic_Acid
-61,ClinicalSkin,53,Hyaluronic_Acid|Vitamin_C
-62,DermaCare,107,Vitamin_C|Hyaluronic_Acid
-63,LuxuryGlow,84,Ceramides|Salicylic_Acid
-64,LuxuryGlow,132,Ceramides|Salicylic_Acid|Vitamin_C
-65,DermaCare,121,Vitamin_C
-66,InfluenceX,50,Hyaluronic_Acid|Vitamin_C
-67,LuxuryGlow,20,Vitamin_C
-68,LuxuryGlow,52,Retinol|Vitamin_C
-69,BudgetBeauty,63,Ceramides|Vitamin_C
-70,DermaCare,149,Retinol
-71,DermaCare,82,Ceramides
-72,ClinicalSkin,98,Retinol
-73,LuxuryGlow,64,Ceramides
-74,InfluenceX,125,Ceramides|Hyaluronic_Acid|Salicylic_Acid
-75,ClinicalSkin,48,Hyaluronic_Acid
-76,LuxuryGlow,146,Salicylic_Acid|Hyaluronic_Acid|Vitamin_C
-77,LuxuryGlow,19,Hyaluronic_Acid|Salicylic_Acid|Retinol
-78,LuxuryGlow,133,Ceramides|Retinol
-79,BudgetBeauty,117,Retinol
-80,DermaCare,12,Vitamin_C|Hyaluronic_Acid
-81,BudgetBeauty,97,Retinol|Salicylic_Acid
-82,LuxuryGlow,18,Ceramides|Salicylic_Acid
-83,LuxuryGlow,42,Hyaluronic_Acid|Retinol|Salicylic_Acid
-84,BudgetBeauty,23,Hyaluronic_Acid
-85,BudgetBeauty,12,Hyaluronic_Acid|Vitamin_C
-86,ClinicalSkin,65,Retinol|Salicylic_Acid|Ceramides
-87,ClinicalSkin,89,Salicylic_Acid|Hyaluronic_Acid
-88,BudgetBeauty,128,Salicylic_Acid
-89,ClinicalSkin,22,Retinol
-90,BudgetBeauty,116,Hyaluronic_Acid|Retinol|Salicylic_Acid
-91,BudgetBeauty,21,Vitamin_C|Retinol|Salicylic_Acid
-92,LuxuryGlow,83,Vitamin_C|Retinol|Salicylic_Acid
-93,LuxuryGlow,19,Hyaluronic_Acid|Retinol
-94,DermaCare,61,Vitamin_C|Ceramides|Retinol
-95,LuxuryGlow,121,Salicylic_Acid
-96,DermaCare,106,Salicylic_Acid|Retinol|Vitamin_C
-97,ClinicalSkin,114,Vitamin_C
-98,DermaCare,118,Retinol
-99,BudgetBeauty,11,Retinol
-100,DermaCare,86,Hyaluronic_Acid|Salicylic_Acid|Ceramides
-101,ClinicalSkin,94,Ceramides|Hyaluronic_Acid
-102,DermaCare,87,Hyaluronic_Acid
-103,InfluenceX,114,Hyaluronic_Acid
-104,BudgetBeauty,24,Hyaluronic_Acid|Retinol
-105,DermaCare,43,Salicylic_Acid|Vitamin_C|Ceramides
-106,InfluenceX,16,Hyaluronic_Acid
-107,InfluenceX,44,Retinol|Hyaluronic_Acid
-108,DermaCare,70,Hyaluronic_Acid
-109,InfluenceX,124,Retinol|Salicylic_Acid
-110,BudgetBeauty,94,Ceramides|Vitamin_C
-111,ClinicalSkin,114,Salicylic_Acid|Ceramides
-112,BudgetBeauty,93,Ceramides
-113,BudgetBeauty,27,Salicylic_Acid
-114,ClinicalSkin,29,Retinol|Ceramides
-115,InfluenceX,110,Ceramides|Salicylic_Acid|Hyaluronic_Acid
-116,ClinicalSkin,71,Retinol
-117,LuxuryGlow,40,Vitamin_C|Salicylic_Acid|Retinol
-118,ClinicalSkin,30,Hyaluronic_Acid|Retinol|Ceramides
-119,LuxuryGlow,57,Retinol|Ceramides|Vitamin_C
-120,LuxuryGlow,89,Retinol|Ceramides|Vitamin_C
-121,InfluenceX,16,Vitamin_C|Retinol
-122,ClinicalSkin,50,Hyaluronic_Acid
-123,InfluenceX,113,Vitamin_C|Hyaluronic_Acid|Retinol
-124,ClinicalSkin,116,Vitamin_C|Salicylic_Acid
-125,BudgetBeauty,41,Hyaluronic_Acid|Vitamin_C
-126,ClinicalSkin,16,Retinol|Vitamin_C|Hyaluronic_Acid
-127,InfluenceX,49,Hyaluronic_Acid|Vitamin_C|Retinol
-128,DermaCare,85,Salicylic_Acid|Retinol|Vitamin_C
-129,ClinicalSkin,126,Salicylic_Acid|Hyaluronic_Acid
-130,BudgetBeauty,126,Hyaluronic_Acid
-131,DermaCare,67,Salicylic_Acid
-132,DermaCare,10,Ceramides|Salicylic_Acid
-133,InfluenceX,43,Ceramides|Hyaluronic_Acid
-134,InfluenceX,63,Vitamin_C|Hyaluronic_Acid
-135,DermaCare,18,Salicylic_Acid|Ceramides|Hyaluronic_Acid
-136,DermaCare,30,Ceramides
-137,InfluenceX,92,Ceramides
-138,DermaCare,104,Vitamin_C
-139,DermaCare,127,Ceramides|Retinol
-140,InfluenceX,30,Ceramides|Vitamin_C|Retinol
-141,InfluenceX,47,Vitamin_C
-142,InfluenceX,140,Hyaluronic_Acid|Retinol
-143,ClinicalSkin,148,Hyaluronic_Acid|Retinol
-144,InfluenceX,112,Retinol
-145,DermaCare,119,Retinol|Ceramides
-146,ClinicalSkin,62,Hyaluronic_Acid
-147,DermaCare,44,Vitamin_C
-148,DermaCare,94,Hyaluronic_Acid|Salicylic_Acid|Ceramides
-149,InfluenceX,17,Ceramides|Vitamin_C
-150,InfluenceX,32,Hyaluronic_Acid
-151,InfluenceX,110,Ceramides|Salicylic_Acid
-152,ClinicalSkin,12,Vitamin_C|Salicylic_Acid
-153,BudgetBeauty,147,Vitamin_C|Ceramides
-154,ClinicalSkin,66,Ceramides|Hyaluronic_Acid|Vitamin_C
-155,DermaCare,132,Vitamin_C|Ceramides
-156,LuxuryGlow,52,Retinol|Vitamin_C
-157,DermaCare,47,Hyaluronic_Acid|Salicylic_Acid
-158,InfluenceX,13,Ceramides|Salicylic_Acid|Vitamin_C
-159,InfluenceX,65,Vitamin_C
-160,DermaCare,20,Retinol
-161,InfluenceX,148,Hyaluronic_Acid|Vitamin_C
-162,BudgetBeauty,13,Vitamin_C|Retinol
-163,InfluenceX,40,Salicylic_Acid|Vitamin_C
-164,LuxuryGlow,118,Ceramides|Salicylic_Acid|Hyaluronic_Acid
-165,DermaCare,45,Salicylic_Acid|Ceramides|Vitamin_C
-166,DermaCare,60,Salicylic_Acid
-167,ClinicalSkin,59,Hyaluronic_Acid
-168,DermaCare,64,Salicylic_Acid|Hyaluronic_Acid
-169,InfluenceX,140,Retinol|Ceramides|Salicylic_Acid
-170,ClinicalSkin,19,Salicylic_Acid|Hyaluronic_Acid|Vitamin_C
-171,LuxuryGlow,116,Salicylic_Acid|Retinol|Vitamin_C
-172,InfluenceX,92,Hyaluronic_Acid|Salicylic_Acid
-173,ClinicalSkin,10,Hyaluronic_Acid|Salicylic_Acid|Retinol
-174,BudgetBeauty,108,Ceramides|Salicylic_Acid|Retinol
-175,LuxuryGlow,86,Ceramides|Vitamin_C
-176,BudgetBeauty,82,Ceramides
-177,BudgetBeauty,107,Vitamin_C
-178,InfluenceX,92,Vitamin_C
-179,BudgetBeauty,33,Vitamin_C|Hyaluronic_Acid|Ceramides
-180,DermaCare,110,Ceramides|Retinol|Vitamin_C
-181,ClinicalSkin,71,Vitamin_C|Ceramides
-182,ClinicalSkin,94,Retinol|Hyaluronic_Acid
-183,LuxuryGlow,42,Vitamin_C|Hyaluronic_Acid
-184,InfluenceX,104,Ceramides|Vitamin_C|Hyaluronic_Acid
-185,LuxuryGlow,72,Retinol|Hyaluronic_Acid
-186,InfluenceX,31,Retinol
-187,BudgetBeauty,128,Retinol|Ceramides
-188,ClinicalSkin,20,Ceramides
-189,DermaCare,22,Hyaluronic_Acid
-190,InfluenceX,80,Ceramides|Hyaluronic_Acid
-191,InfluenceX,33,Vitamin_C|Ceramides|Salicylic_Acid
-192,LuxuryGlow,120,Hyaluronic_Acid|Vitamin_C
-193,DermaCare,72,Ceramides|Retinol
-194,InfluenceX,31,Ceramides|Retinol|Hyaluronic_Acid
-195,ClinicalSkin,12,Retinol|Vitamin_C
-196,BudgetBeauty,33,Retinol|Hyaluronic_Acid
-197,LuxuryGlow,91,Hyaluronic_Acid|Retinol|Salicylic_Acid
-198,ClinicalSkin,59,Hyaluronic_Acid|Ceramides|Salicylic_Acid
-199,InfluenceX,60,Ceramides|Retinol
-200,LuxuryGlow,37,Retinol
-201,DermaCare,83,Hyaluronic_Acid|Retinol
-202,LuxuryGlow,107,Ceramides|Hyaluronic_Acid|Vitamin_C
-203,LuxuryGlow,99,Ceramides
-204,BudgetBeauty,109,Hyaluronic_Acid|Vitamin_C|Salicylic_Acid
-205,LuxuryGlow,17,Retinol|Vitamin_C|Hyaluronic_Acid
-206,InfluenceX,15,Hyaluronic_Acid|Salicylic_Acid
-207,BudgetBeauty,66,Salicylic_Acid|Ceramides
-208,InfluenceX,81,Salicylic_Acid|Ceramides
-209,DermaCare,75,Ceramides
-210,BudgetBeauty,11,Hyaluronic_Acid
-211,LuxuryGlow,83,Vitamin_C|Hyaluronic_Acid|Retinol
-212,InfluenceX,56,Vitamin_C|Retinol
-213,ClinicalSkin,67,Retinol|Salicylic_Acid
-214,ClinicalSkin,77,Salicylic_Acid|Hyaluronic_Acid|Retinol
-215,DermaCare,129,Salicylic_Acid|Hyaluronic_Acid
-216,DermaCare,28,Ceramides
-217,LuxuryGlow,140,Salicylic_Acid
-218,InfluenceX,145,Ceramides|Vitamin_C
-219,BudgetBeauty,139,Hyaluronic_Acid
-220,BudgetBeauty,112,Retinol|Vitamin_C|Salicylic_Acid
-221,DermaCare,103,Ceramides|Hyaluronic_Acid
-222,InfluenceX,16,Ceramides
-223,DermaCare,23,Hyaluronic_Acid|Retinol|Salicylic_Acid
-224,LuxuryGlow,83,Hyaluronic_Acid
-225,BudgetBeauty,129,Ceramides|Retinol|Hyaluronic_Acid
-226,LuxuryGlow,28,Retinol|Vitamin_C
-227,BudgetBeauty,30,Ceramides|Vitamin_C|Hyaluronic_Acid
-228,LuxuryGlow,63,Salicylic_Acid|Vitamin_C|Retinol
-229,BudgetBeauty,124,Retinol|Salicylic_Acid|Vitamin_C
-230,DermaCare,69,Ceramides|Salicylic_Acid|Retinol
-231,BudgetBeauty,140,Salicylic_Acid|Hyaluronic_Acid|Vitamin_C
-232,ClinicalSkin,77,Vitamin_C|Retinol|Salicylic_Acid
-233,ClinicalSkin,56,Vitamin_C|Salicylic_Acid
-234,InfluenceX,26,Vitamin_C|Retinol
-235,BudgetBeauty,92,Salicylic_Acid|Hyaluronic_Acid|Vitamin_C
-236,InfluenceX,61,Vitamin_C|Retinol|Ceramides
-237,InfluenceX,72,Salicylic_Acid|Vitamin_C|Ceramides
-238,BudgetBeauty,143,Retinol|Salicylic_Acid
-239,InfluenceX,49,Salicylic_Acid|Vitamin_C|Hyaluronic_Acid
-240,LuxuryGlow,125,Ceramides
-241,BudgetBeauty,132,Vitamin_C|Ceramides|Salicylic_Acid
-242,DermaCare,45,Ceramides|Hyaluronic_Acid
-243,BudgetBeauty,138,Vitamin_C|Salicylic_Acid
-244,LuxuryGlow,52,Ceramides|Hyaluronic_Acid|Retinol
-245,DermaCare,86,Ceramides|Salicylic_Acid
-246,ClinicalSkin,85,Salicylic_Acid|Hyaluronic_Acid
-247,LuxuryGlow,99,Salicylic_Acid|Hyaluronic_Acid
-248,InfluenceX,81,Retinol|Ceramides|Hyaluronic_Acid
-249,InfluenceX,29,Hyaluronic_Acid|Vitamin_C
-250,ClinicalSkin,56,Vitamin_C
-251,DermaCare,135,Ceramides|Hyaluronic_Acid|Salicylic_Acid
-252,BudgetBeauty,74,Retinol|Ceramides
-253,LuxuryGlow,97,Retinol|Vitamin_C
-254,DermaCare,33,Ceramides|Vitamin_C
-255,BudgetBeauty,105,Ceramides|Vitamin_C
-256,InfluenceX,115,Hyaluronic_Acid|Ceramides
-257,ClinicalSkin,12,Hyaluronic_Acid|Vitamin_C
-258,LuxuryGlow,111,Vitamin_C|Ceramides
-259,InfluenceX,106,Hyaluronic_Acid|Vitamin_C|Salicylic_Acid
-260,DermaCare,18,Ceramides|Retinol|Salicylic_Acid
-261,InfluenceX,10,Ceramides
-262,InfluenceX,22,Hyaluronic_Acid
-263,InfluenceX,30,Hyaluronic_Acid|Salicylic_Acid|Ceramides
-264,BudgetBeauty,84,Ceramides|Vitamin_C
-265,LuxuryGlow,86,Ceramides|Vitamin_C
-266,BudgetBeauty,62,Vitamin_C|Salicylic_Acid|Retinol
-267,LuxuryGlow,78,Retinol
-268,DermaCare,113,Salicylic_Acid|Vitamin_C|Ceramides
-269,LuxuryGlow,28,Hyaluronic_Acid|Retinol
-270,LuxuryGlow,142,Retinol
-271,LuxuryGlow,141,Retinol|Ceramides
-272,InfluenceX,72,Hyaluronic_Acid
-273,ClinicalSkin,75,Ceramides|Hyaluronic_Acid
-274,DermaCare,68,Salicylic_Acid
-275,ClinicalSkin,77,Ceramides|Hyaluronic_Acid
-276,InfluenceX,63,Hyaluronic_Acid|Ceramides|Vitamin_C
-277,BudgetBeauty,102,Retinol|Salicylic_Acid
-278,InfluenceX,95,Ceramides|Hyaluronic_Acid
-279,LuxuryGlow,33,Retinol|Ceramides
-280,InfluenceX,29,Retinol|Vitamin_C|Hyaluronic_Acid
-281,DermaCare,39,Vitamin_C|Salicylic_Acid
-282,DermaCare,92,Ceramides|Retinol
-283,ClinicalSkin,125,Retinol|Salicylic_Acid
-284,InfluenceX,107,Salicylic_Acid|Ceramides
-285,ClinicalSkin,21,Vitamin_C|Retinol|Salicylic_Acid
-286,ClinicalSkin,43,Hyaluronic_Acid|Ceramides
-287,ClinicalSkin,14,Hyaluronic_Acid|Salicylic_Acid
-288,LuxuryGlow,132,Vitamin_C|Salicylic_Acid
-289,ClinicalSkin,16,Hyaluronic_Acid|Salicylic_Acid
-290,BudgetBeauty,88,Vitamin_C|Hyaluronic_Acid
-291,DermaCare,67,Ceramides
-292,BudgetBeauty,62,Ceramides|Retinol|Salicylic_Acid
-293,BudgetBeauty,91,Retinol|Ceramides
-294,LuxuryGlow,97,Salicylic_Acid|Hyaluronic_Acid
-295,DermaCare,104,Vitamin_C|Retinol|Salicylic_Acid
-296,InfluenceX,112,Retinol
-297,ClinicalSkin,147,Vitamin_C
-298,BudgetBeauty,13,Retinol|Vitamin_C|Ceramides
-299,BudgetBeauty,71,Hyaluronic_Acid
-300,InfluenceX,63,Ceramides
-301,ClinicalSkin,78,Ceramides|Hyaluronic_Acid
-302,LuxuryGlow,103,Vitamin_C|Retinol|Ceramides
-303,InfluenceX,76,Hyaluronic_Acid
-304,LuxuryGlow,129,Retinol
-305,InfluenceX,128,Salicylic_Acid
-306,DermaCare,41,Hyaluronic_Acid|Vitamin_C|Ceramides
-307,BudgetBeauty,47,Ceramides|Vitamin_C|Retinol
-308,DermaCare,135,Salicylic_Acid|Vitamin_C
-309,ClinicalSkin,112,Retinol|Salicylic_Acid
-310,BudgetBeauty,66,Vitamin_C
-311,InfluenceX,63,Retinol
-312,LuxuryGlow,84,Retinol|Ceramides|Salicylic_Acid
-313,InfluenceX,134,Hyaluronic_Acid|Salicylic_Acid
-314,InfluenceX,146,Hyaluronic_Acid
-315,ClinicalSkin,141,Salicylic_Acid
-316,BudgetBeauty,21,Hyaluronic_Acid
-317,ClinicalSkin,50,Salicylic_Acid
-318,ClinicalSkin,114,Ceramides
-319,DermaCare,122,Retinol
-320,DermaCare,117,Salicylic_Acid|Retinol|Ceramides
-321,DermaCare,144,Retinol|Hyaluronic_Acid|Salicylic_Acid
-322,LuxuryGlow,32,Salicylic_Acid
-323,BudgetBeauty,89,Ceramides
-324,BudgetBeauty,141,Hyaluronic_Acid
-325,BudgetBeauty,123,Hyaluronic_Acid
-326,InfluenceX,69,Salicylic_Acid|Ceramides|Hyaluronic_Acid
-327,InfluenceX,75,Ceramides|Salicylic_Acid
-328,InfluenceX,54,Hyaluronic_Acid|Salicylic_Acid|Retinol
-329,ClinicalSkin,65,Vitamin_C|Salicylic_Acid
-330,LuxuryGlow,137,Vitamin_C|Ceramides
-331,LuxuryGlow,133,Vitamin_C|Salicylic_Acid
-332,LuxuryGlow,68,Ceramides|Hyaluronic_Acid
-333,LuxuryGlow,101,Retinol
-334,ClinicalSkin,36,Ceramides|Retinol|Hyaluronic_Acid
-335,ClinicalSkin,60,Retinol|Vitamin_C|Ceramides
-336,ClinicalSkin,65,Salicylic_Acid|Ceramides
-337,ClinicalSkin,108,Hyaluronic_Acid|Vitamin_C|Ceramides
-338,DermaCare,71,Retinol|Vitamin_C
-339,InfluenceX,60,Salicylic_Acid|Retinol
-340,InfluenceX,95,Retinol|Ceramides
-341,DermaCare,96,Vitamin_C|Salicylic_Acid|Ceramides
-342,LuxuryGlow,93,Vitamin_C
-343,LuxuryGlow,63,Retinol|Hyaluronic_Acid|Ceramides
-344,LuxuryGlow,45,Ceramides|Retinol|Vitamin_C
-345,LuxuryGlow,32,Retinol|Vitamin_C
-346,LuxuryGlow,84,Ceramides|Retinol
-347,BudgetBeauty,70,Ceramides
-348,ClinicalSkin,10,Hyaluronic_Acid
-349,InfluenceX,140,Salicylic_Acid
-350,BudgetBeauty,92,Retinol|Salicylic_Acid|Hyaluronic_Acid
-351,ClinicalSkin,80,Vitamin_C
-352,ClinicalSkin,110,Ceramides|Salicylic_Acid|Retinol
-353,BudgetBeauty,26,Hyaluronic_Acid
-354,BudgetBeauty,19,Retinol|Ceramides|Hyaluronic_Acid
-355,LuxuryGlow,45,Hyaluronic_Acid
-356,ClinicalSkin,50,Vitamin_C|Salicylic_Acid|Ceramides
-357,LuxuryGlow,52,Ceramides
-358,DermaCare,130,Vitamin_C|Ceramides
-359,BudgetBeauty,39,Retinol
-360,BudgetBeauty,42,Retinol|Salicylic_Acid|Vitamin_C
-361,DermaCare,120,Ceramides
-362,LuxuryGlow,122,Salicylic_Acid|Retinol|Hyaluronic_Acid
-363,InfluenceX,31,Ceramides|Vitamin_C
-364,InfluenceX,76,Hyaluronic_Acid|Salicylic_Acid
-365,BudgetBeauty,26,Salicylic_Acid|Retinol
-366,ClinicalSkin,84,Ceramides|Retinol
-367,LuxuryGlow,26,Vitamin_C
-368,ClinicalSkin,124,Salicylic_Acid
-369,DermaCare,117,Hyaluronic_Acid|Ceramides
-370,BudgetBeauty,103,Retinol|Salicylic_Acid
-371,LuxuryGlow,143,Vitamin_C|Hyaluronic_Acid
-372,DermaCare,26,Ceramides|Hyaluronic_Acid
-373,ClinicalSkin,73,Retinol|Salicylic_Acid|Hyaluronic_Acid
-374,LuxuryGlow,86,Salicylic_Acid|Vitamin_C
-375,LuxuryGlow,115,Ceramides|Vitamin_C
-376,ClinicalSkin,28,Vitamin_C|Retinol
-377,LuxuryGlow,27,Salicylic_Acid|Retinol
-378,DermaCare,11,Vitamin_C|Retinol|Salicylic_Acid
-379,InfluenceX,72,Hyaluronic_Acid
-380,InfluenceX,117,Vitamin_C|Salicylic_Acid|Hyaluronic_Acid
-381,BudgetBeauty,98,Retinol|Hyaluronic_Acid|Vitamin_C
-382,DermaCare,32,Ceramides
-383,LuxuryGlow,142,Ceramides|Hyaluronic_Acid|Vitamin_C
-384,BudgetBeauty,20,Hyaluronic_Acid|Ceramides|Salicylic_Acid
-385,DermaCare,146,Hyaluronic_Acid|Ceramides
-386,ClinicalSkin,135,Salicylic_Acid
-387,DermaCare,27,Vitamin_C|Ceramides|Retinol
-388,ClinicalSkin,66,Ceramides|Retinol
-389,BudgetBeauty,36,Vitamin_C
-390,LuxuryGlow,109,Vitamin_C|Retinol
-391,BudgetBeauty,67,Salicylic_Acid|Retinol|Vitamin_C
-392,LuxuryGlow,47,Vitamin_C|Ceramides
-393,LuxuryGlow,18,Retinol
-394,BudgetBeauty,86,Salicylic_Acid
-395,ClinicalSkin,27,Ceramides|Vitamin_C|Hyaluronic_Acid
-396,ClinicalSkin,74,Salicylic_Acid|Vitamin_C|Retinol
-397,DermaCare,96,Ceramides|Vitamin_C
-398,ClinicalSkin,46,Salicylic_Acid
-399,InfluenceX,41,Retinol
-400,LuxuryGlow,63,Hyaluronic_Acid|Salicylic_Acid|Vitamin_C
-401,InfluenceX,57,Ceramides|Hyaluronic_Acid
-402,BudgetBeauty,120,Retinol|Vitamin_C
-403,InfluenceX,132,Ceramides|Salicylic_Acid
-404,BudgetBeauty,47,Retinol
-405,LuxuryGlow,62,Vitamin_C|Retinol|Hyaluronic_Acid
-406,ClinicalSkin,72,Retinol
-407,LuxuryGlow,10,Hyaluronic_Acid|Retinol|Ceramides
-408,InfluenceX,10,Ceramides
-409,LuxuryGlow,106,Ceramides|Vitamin_C
-410,BudgetBeauty,147,Ceramides
-411,LuxuryGlow,15,Vitamin_C|Retinol|Salicylic_Acid
-412,BudgetBeauty,118,Hyaluronic_Acid|Ceramides
-413,BudgetBeauty,18,Hyaluronic_Acid|Ceramides
-414,DermaCare,24,Salicylic_Acid
-415,BudgetBeauty,47,Ceramides
-416,ClinicalSkin,145,Ceramides|Salicylic_Acid|Retinol
-417,BudgetBeauty,123,Hyaluronic_Acid|Vitamin_C|Salicylic_Acid
-418,DermaCare,99,Ceramides
-419,DermaCare,19,Vitamin_C|Salicylic_Acid|Hyaluronic_Acid
-420,BudgetBeauty,35,Hyaluronic_Acid|Vitamin_C|Retinol
-421,BudgetBeauty,13,Vitamin_C|Hyaluronic_Acid|Retinol
-422,DermaCare,98,Vitamin_C|Hyaluronic_Acid
-423,BudgetBeauty,142,Ceramides|Vitamin_C|Hyaluronic_Acid
-424,BudgetBeauty,13,Ceramides|Vitamin_C
-425,DermaCare,116,Ceramides
-426,DermaCare,17,Salicylic_Acid|Vitamin_C
-427,BudgetBeauty,11,Salicylic_Acid|Ceramides|Hyaluronic_Acid
-428,LuxuryGlow,140,Retinol
-429,InfluenceX,39,Hyaluronic_Acid|Vitamin_C|Salicylic_Acid
-430,DermaCare,144,Retinol|Salicylic_Acid
-431,InfluenceX,53,Vitamin_C
-432,ClinicalSkin,127,Hyaluronic_Acid|Vitamin_C
-433,LuxuryGlow,16,Hyaluronic_Acid|Salicylic_Acid
-434,BudgetBeauty,109,Retinol
-435,DermaCare,10,Salicylic_Acid
-436,BudgetBeauty,39,Hyaluronic_Acid|Vitamin_C
-437,InfluenceX,73,Salicylic_Acid|Ceramides|Vitamin_C
-438,BudgetBeauty,67,Hyaluronic_Acid
-439,ClinicalSkin,70,Ceramides|Vitamin_C|Salicylic_Acid
-440,BudgetBeauty,79,Retinol
-441,LuxuryGlow,99,Hyaluronic_Acid
-442,InfluenceX,40,Ceramides|Vitamin_C|Salicylic_Acid
-443,LuxuryGlow,113,Ceramides|Salicylic_Acid
-444,ClinicalSkin,75,Hyaluronic_Acid|Ceramides|Vitamin_C
-445,InfluenceX,148,Ceramides
-446,BudgetBeauty,118,Ceramides
-447,InfluenceX,61,Salicylic_Acid
-448,ClinicalSkin,71,Salicylic_Acid|Ceramides
-449,InfluenceX,114,Salicylic_Acid|Vitamin_C
-450,BudgetBeauty,47,Salicylic_Acid|Retinol
-451,LuxuryGlow,103,Hyaluronic_Acid|Salicylic_Acid
-452,ClinicalSkin,134,Retinol|Hyaluronic_Acid|Salicylic_Acid
-453,BudgetBeauty,96,Retinol|Hyaluronic_Acid|Ceramides
-454,InfluenceX,62,Vitamin_C|Hyaluronic_Acid|Salicylic_Acid
-455,LuxuryGlow,66,Vitamin_C|Salicylic_Acid|Hyaluronic_Acid
-456,DermaCare,129,Hyaluronic_Acid
-457,LuxuryGlow,42,Retinol|Vitamin_C
-458,ClinicalSkin,95,Retinol|Salicylic_Acid
-459,DermaCare,48,Retinol|Salicylic_Acid
-460,BudgetBeauty,13,Salicylic_Acid|Retinol
-461,InfluenceX,119,Vitamin_C|Ceramides
-462,BudgetBeauty,40,Vitamin_C
-463,InfluenceX,48,Ceramides|Retinol
-464,LuxuryGlow,95,Vitamin_C|Salicylic_Acid|Hyaluronic_Acid
-465,ClinicalSkin,73,Ceramides
-466,BudgetBeauty,76,Salicylic_Acid|Ceramides
-467,BudgetBeauty,99,Retinol|Ceramides|Hyaluronic_Acid
-468,ClinicalSkin,45,Vitamin_C|Hyaluronic_Acid|Retinol
-469,InfluenceX,94,Vitamin_C|Salicylic_Acid
-470,BudgetBeauty,129,Vitamin_C|Retinol|Ceramides
-471,LuxuryGlow,122,Vitamin_C
-472,BudgetBeauty,80,Hyaluronic_Acid|Salicylic_Acid|Vitamin_C
-473,ClinicalSkin,40,Vitamin_C|Salicylic_Acid|Ceramides
-474,LuxuryGlow,134,Retinol
-475,BudgetBeauty,139,Ceramides|Salicylic_Acid
-476,ClinicalSkin,147,Vitamin_C
-477,BudgetBeauty,125,Vitamin_C|Salicylic_Acid
-478,ClinicalSkin,55,Ceramides
-479,BudgetBeauty,75,Retinol|Ceramides
-480,DermaCare,19,Salicylic_Acid
-481,DermaCare,85,Ceramides|Vitamin_C
-482,ClinicalSkin,120,Retinol
-483,BudgetBeauty,31,Vitamin_C|Hyaluronic_Acid|Retinol
-484,BudgetBeauty,114,Vitamin_C|Hyaluronic_Acid|Salicylic_Acid
-485,DermaCare,30,Vitamin_C
-486,DermaCare,58,Vitamin_C|Salicylic_Acid|Retinol
-487,BudgetBeauty,101,Retinol|Salicylic_Acid|Ceramides
-488,ClinicalSkin,12,Retinol|Hyaluronic_Acid
-489,DermaCare,137,Ceramides|Hyaluronic_Acid
-490,LuxuryGlow,78,Hyaluronic_Acid
-491,DermaCare,82,Salicylic_Acid|Retinol
-492,ClinicalSkin,135,Retinol|Vitamin_C|Ceramides
-493,DermaCare,128,Salicylic_Acid|Ceramides|Hyaluronic_Acid
-494,InfluenceX,128,Vitamin_C|Ceramides|Hyaluronic_Acid
-495,ClinicalSkin,114,Hyaluronic_Acid
-496,BudgetBeauty,60,Salicylic_Acid|Vitamin_C|Hyaluronic_Acid
-497,ClinicalSkin,36,Hyaluronic_Acid|Ceramides
-498,DermaCare,96,Ceramides|Salicylic_Acid
-499,LuxuryGlow,111,Hyaluronic_Acid|Retinol|Salicylic_Acid
-500,DermaCare,77,Hyaluronic_Acid|Retinol
-501,ClinicalSkin,141,Salicylic_Acid|Retinol
-502,DermaCare,120,Ceramides|Retinol|Salicylic_Acid
-503,BudgetBeauty,22,Ceramides|Salicylic_Acid|Retinol
-504,DermaCare,78,Ceramides|Hyaluronic_Acid|Salicylic_Acid
-505,ClinicalSkin,69,Ceramides|Retinol|Vitamin_C
-506,LuxuryGlow,113,Salicylic_Acid
-507,LuxuryGlow,27,Ceramides|Retinol|Vitamin_C
-508,DermaCare,17,Vitamin_C|Salicylic_Acid|Hyaluronic_Acid
-509,ClinicalSkin,37,Retinol|Vitamin_C
-510,DermaCare,27,Vitamin_C|Retinol|Hyaluronic_Acid
-511,LuxuryGlow,16,Salicylic_Acid|Hyaluronic_Acid|Vitamin_C
-512,InfluenceX,124,Vitamin_C|Hyaluronic_Acid
-513,BudgetBeauty,11,Hyaluronic_Acid|Retinol|Vitamin_C
-514,BudgetBeauty,102,Retinol|Vitamin_C|Salicylic_Acid
-515,BudgetBeauty,130,Ceramides|Salicylic_Acid|Hyaluronic_Acid
-516,DermaCare,99,Salicylic_Acid|Retinol
-517,InfluenceX,30,Hyaluronic_Acid
-518,LuxuryGlow,73,Retinol
-519,InfluenceX,106,Vitamin_C|Hyaluronic_Acid|Salicylic_Acid
-520,BudgetBeauty,38,Retinol|Hyaluronic_Acid|Salicylic_Acid
-521,InfluenceX,48,Vitamin_C|Ceramides|Hyaluronic_Acid
-522,InfluenceX,136,Salicylic_Acid
-523,InfluenceX,24,Vitamin_C|Hyaluronic_Acid|Salicylic_Acid
-524,ClinicalSkin,65,Salicylic_Acid|Ceramides
-525,BudgetBeauty,39,Ceramides|Vitamin_C
-526,BudgetBeauty,34,Salicylic_Acid|Ceramides|Hyaluronic_Acid
-527,DermaCare,56,Retinol|Vitamin_C
-528,BudgetBeauty,90,Vitamin_C
-529,LuxuryGlow,140,Ceramides|Hyaluronic_Acid|Vitamin_C
-530,ClinicalSkin,125,Salicylic_Acid|Vitamin_C
-531,ClinicalSkin,127,Ceramides|Retinol
-532,ClinicalSkin,14,Ceramides|Salicylic_Acid|Vitamin_C
-533,LuxuryGlow,49,Retinol|Ceramides
-534,ClinicalSkin,36,Hyaluronic_Acid|Ceramides
-535,ClinicalSkin,88,Vitamin_C|Salicylic_Acid|Ceramides
-536,LuxuryGlow,69,Retinol
-537,InfluenceX,87,Vitamin_C|Hyaluronic_Acid|Retinol
-538,ClinicalSkin,88,Retinol
-539,ClinicalSkin,126,Hyaluronic_Acid|Vitamin_C
-540,ClinicalSkin,36,Retinol|Ceramides|Vitamin_C
-541,ClinicalSkin,62,Vitamin_C|Retinol|Hyaluronic_Acid
-542,LuxuryGlow,123,Retinol|Salicylic_Acid
-543,InfluenceX,14,Retinol|Salicylic_Acid|Ceramides
-544,InfluenceX,31,Ceramides|Hyaluronic_Acid
-545,LuxuryGlow,48,Vitamin_C|Hyaluronic_Acid|Retinol
-546,ClinicalSkin,66,Hyaluronic_Acid|Ceramides
-547,LuxuryGlow,126,Salicylic_Acid|Hyaluronic_Acid|Ceramides
-548,InfluenceX,54,Vitamin_C|Hyaluronic_Acid
-549,InfluenceX,65,Hyaluronic_Acid|Vitamin_C|Retinol
-550,ClinicalSkin,78,Salicylic_Acid|Hyaluronic_Acid
-551,ClinicalSkin,43,Ceramides
-552,BudgetBeauty,110,Vitamin_C|Ceramides|Hyaluronic_Acid
-553,DermaCare,34,Ceramides|Retinol
-554,ClinicalSkin,62,Retinol|Vitamin_C
-555,DermaCare,77,Retinol
-556,ClinicalSkin,35,Hyaluronic_Acid|Retinol
-557,BudgetBeauty,111,Hyaluronic_Acid|Vitamin_C|Ceramides
-558,InfluenceX,141,Ceramides|Retinol
-559,BudgetBeauty,127,Ceramides
-560,ClinicalSkin,45,Vitamin_C|Retinol
-561,DermaCare,139,Salicylic_Acid|Retinol
-562,LuxuryGlow,25,Vitamin_C|Retinol
-563,InfluenceX,87,Hyaluronic_Acid
-564,ClinicalSkin,127,Ceramides|Retinol
-565,DermaCare,28,Ceramides
-566,ClinicalSkin,62,Hyaluronic_Acid
-567,LuxuryGlow,101,Ceramides|Hyaluronic_Acid|Retinol
-568,DermaCare,118,Salicylic_Acid
-569,InfluenceX,128,Vitamin_C|Salicylic_Acid
-570,DermaCare,142,Ceramides
-571,DermaCare,63,Vitamin_C|Ceramides
-572,DermaCare,55,Retinol|Ceramides
-573,LuxuryGlow,46,Ceramides
-574,DermaCare,129,Salicylic_Acid|Hyaluronic_Acid|Vitamin_C
-575,DermaCare,24,Vitamin_C
-576,InfluenceX,125,Retinol
-577,LuxuryGlow,112,Retinol
-578,ClinicalSkin,64,Salicylic_Acid|Retinol|Hyaluronic_Acid
-579,InfluenceX,65,Ceramides|Vitamin_C|Salicylic_Acid
-580,ClinicalSkin,122,Retinol|Hyaluronic_Acid
-581,LuxuryGlow,73,Hyaluronic_Acid|Vitamin_C
-582,BudgetBeauty,85,Hyaluronic_Acid|Salicylic_Acid|Retinol
-583,BudgetBeauty,18,Ceramides|Hyaluronic_Acid
-584,DermaCare,127,Vitamin_C|Ceramides|Retinol
-585,BudgetBeauty,142,Vitamin_C
-586,LuxuryGlow,135,Hyaluronic_Acid
-587,InfluenceX,34,Hyaluronic_Acid|Salicylic_Acid
-588,BudgetBeauty,107,Hyaluronic_Acid|Vitamin_C
-589,BudgetBeauty,104,Retinol|Salicylic_Acid
-590,BudgetBeauty,117,Retinol|Hyaluronic_Acid|Salicylic_Acid
-591,LuxuryGlow,118,Retinol|Hyaluronic_Acid
-592,InfluenceX,69,Ceramides|Retinol|Vitamin_C
-593,LuxuryGlow,19,Retinol|Ceramides|Vitamin_C
-594,DermaCare,134,Hyaluronic_Acid
-595,InfluenceX,94,Vitamin_C
-596,ClinicalSkin,50,Vitamin_C|Ceramides
-597,ClinicalSkin,22,Hyaluronic_Acid|Ceramides|Retinol
-598,ClinicalSkin,105,Ceramides
-599,InfluenceX,48,Retinol|Salicylic_Acid|Ceramides
+Product_ID,Brand,Category,Price,Ingredients
+0,Minimalist,Treatment,599,Retinol|Coenzyme Q10|Vitamin E|Squalane
+1,The Ordinary,Serum,700,Hyaluronic Acid|Vitamin B5
+2,The Derma Co,Treatment,499,Salicylic Acid|Witch Hazel
+3,Dot & Key,Moisturizer,395,Ceramides|Hyaluronic Acid
+4,Minimalist,Serum,699,Vitamin C|Centella Asiatica
+5,CeraVe,Moisturizer,1100,Ceramides|Hyaluronic Acid|Niacinamide
+6,Cetaphil,Cleanser,333,Glycerin|Panthenol|Niacinamide
+7,Neutrogena,Moisturizer,950,Hyaluronic Acid
+8,Plum,Serum,550,Vitamin C|Mandarin
+9,Mamaearth,Serum,399,Vitamin C|Turmeric
+10,Minimalist,Treatment,599,Salicylic Acid|Niacinamide
+11,Deconstruct,Treatment,699,Retinol|Bakuchiol|Peptides
+12,The Ordinary,Serum,600,Niacinamide|Zinc
+13,Re'equil,Sunscreen,780,SPF 50|Octinoxate|Oxybenzone
+14,Innisfree,Treatment,1550,Retinol|Cica|Ceramide|Hyaluronic Acid
+15,Benton,Serum,1450,Snail Mucin|Bee Venom|Hyaluronic Acid
+16,LANEIGE,Serum,1400,Vitamin C|Hyaluronic Acid
+17,Paula's Choice,Exfoliant,1200,Salicylic Acid|Green Tea
+18,The Derma Co,Serum,599,Vitamin C|Niacinamide|Hyaluronic Acid
+19,Dr. Sheth's,Moisturizer,499,Ceramides|Vitamin C
+20,Kiehl's,Treatment,4000,Retinol|Peptides|Ceramides
+21,Minimalist,Cleanser,299,Salicylic Acid|Glycerin
+22,The Ordinary,Exfoliant,850,Glycolic Acid|Aloe Vera
+23,Cosrx,Serum,1450,Snail Mucin|Hyaluronic Acid
+24,Cetaphil,Moisturizer,550,Hyaluronic Acid|Vitamin E
+25,Neutrogena,Cleanser,150,Salicylic Acid
+26,Simple,Moisturizer,385,Niacinamide|Vitamin B5|Vitamin E
+27,Dot & Key,Moisturizer,595,Vitamin C|Vitamin E|Shea Butter
+28,Plum,Serum,450,Niacinamide|Rice Water
+29,Minimalist,Serum,799,Peptides|Hyaluronic Acid
+30,Deconstruct,Serum,799,Vitamin C|Ferulic Acid
+31,Biotique,Cleanser,199,Papaya|Honey
+32,Forest Essentials,Moisturizer,2500,Sandalwood|Turmeric|Honey
+33,Kama Ayurveda,Toner,1895,Rose Water
+34,Mamaearth,Cleanser,349,Tea Tree|Salicylic Acid
+35,The Derma Co,Serum,499,Niacinamide|Zinc|Hyaluronic Acid
+36,The Ordinary,Serum,950,Multipeptide|Hyaluronic Acid
+37,Minimalist,Serum,499,Alpha Arbutin|Hyaluronic Acid
+38,CeraVe,Cleanser,1300,Salicylic Acid|Ceramides|Niacinamide
+39,Dot & Key,Treatment,695,Retinol|Ceramides|Hibiscus
+40,Plum,Treatment,590,Retinol|Bakuchiol
+41,Mamaearth,Treatment,499,Retinol|Bakuchiol
+42,The Derma Co,Treatment,699,Retinol|Vitamin C
+43,Minimalist,Serum,699,Niacinamide|Hyaluronic Acid
+44,Deconstruct,Serum,599,Salicylic Acid|Niacinamide
+45,Simple,Moisturizer,450,Hyaluronic Acid|Glycerin
+46,Neutrogena,Treatment,1200,Retinol|Hyaluronic Acid
+47,CeraVe,Treatment,1500,Retinol|Ceramides
+48,Kiehl's,Serum,5200,Vitamin C|Hyaluronic Acid
+49,Clinique,Moisturizer,3500,Hyaluronic Acid|Activated Aloe Water
+50,Minimalist,Serum,399,Niacinamide|Aloe Vera
+51,The Derma Co,Treatment,399,Kojic Acid|Vitamin C
+52,Fixderma,Sunscreen,450,SPF 30
+53,La Shield,Sunscreen,790,SPF 40
+54,Bioderma,Serum,1500,Niacinamide|Zinc
+55,Sebamed,Moisturizer,600,Panthenol|Allantoin
+56,Minimalist,Serum,699,Ferulic Acid|Vitamin C|Vitamin E
+57,The Ordinary,Treatment,1200,Retinol|Squalane
+58,Dot & Key,Serum,495,Watermelon|Vitamin C|Hyaluronic Acid
+59,Paula's Choice,Serum,3400,Niacinamide|Vitamin C
+60,The Derma Co,Moisturizer,499,Hyaluronic Acid|Ceramides
+61,La Roche-Posay,Cleanser,1800,Ceramides|Niacinamide|Prebiotic Thermal Water
+62,La Roche-Posay,Moisturizer,2200,Prebiotic Thermal Water|Ceramide-3|Glycerin
+63,Vichy,Serum,2800,Hyaluronic Acid|Volcanic Water
+64,SkinCeuticals,Serum,15000,Vitamin C|Ferulic Acid|Vitamin E
+65,COSRX,Treatment,1250,Salicylic Acid|Betaine Salicylate
+66,COSRX,Moisturizer,1450,Birch Sap|Hyaluronic Acid
+67,Sunday Riley,Treatment,7500,Lactic Acid|Licorice|Lemongrass
+68,Drunk Elephant,Serum,6800,Vitamin C|Ferulic Acid
+69,The Inkey List,Serum,900,Hyaluronic Acid
+70,The Inkey List,Cleanser,1100,Salicylic Acid|Zinc
+71,Bioderma,Cleanser,1100,Micellar Water|Cucumber Extract
+72,Avene,Moisturizer,1600,Thermal Spring Water|Glycerin
+73,Differin,Treatment,1500,Adapalene (Retinoid)
+74,EltaMD,Sunscreen,3500,Zinc Oxide|Niacinamide|SPF 46
+75,Biore,Sunscreen,1200,Hyaluronic Acid|Royal Jelly|SPF 50
+76,Laneige,Mask,1900,Squalane|Probiotics|Hyaluronic Acid
+77,Glow Recipe,Moisturizer,3200,Watermelon|Hyaluronic Acid
+78,Tatcha,Moisturizer,6200,Japanese Wild Rose|Hadasei-3
+79,Youth To The People,Cleanser,3000,Kale|Spinach|Green Tea
+80,The Ordinary,Mask,1100,Salicylic Acid|Charcoal|Kaolin
+81,Murad,Treatment,4500,Salicylic Acid|Niacinamide
+82,Fresh,Cleanser,3200,Soy Proteins|Cucumber|Rosewater
+83,Kiehl's,Mask,3800,Rare Earth Clays|Aloe Vera
+84,Minimalist,Exfoliant,599,Glycolic Acid|Salicylic Acid|Lactic Acid
+85,The Ordinary,Serum,900,Azelaic Acid
+86,CeraVe,Cleanser,1100,Ceramides|Hyaluronic Acid
+87,Neutrogena,Sunscreen,650,Helioplex|SPF 50
+88,Supergoop!,Sunscreen,3400,Avobenzone|SPF 40
+89,Wishtrend,Serum,1800,Pure Vitamin C 21.5%
+90,I'm From,Mask,2100,Mugwort|Glycerin
+91,Paula's Choice,Treatment,3200,Azelaic Acid|Salicylic Acid
+92,Dr. Jart+,Moisturizer,3500,Ceramidin Complex
+93,Foxtale,Serum,595,Retinol|Betaine|Kokum Butter
+94,Foxtale,Sunscreen,395,SPF 50|Niacinamide|Vitamin B5
+95,Conscious Chemist,Sunscreen,499,SPF 50|Berry Extract|Hyaluronic Acid
+96,Conscious Chemist,Moisturizer,599,Ceramides|Oat Extract|Peptides
+97,WishCare,Serum,899,Ferulic Acid|Vitamin C|Vitamin E
+98,WishCare,Sunscreen,499,SPF 50|Cica|Ceramides
+99,Suganda,Serum,699,Niacinamide|Panthenol|Centella Asiatica
+100,Suganda,Cleanser,599,Squalane|Glycerin|Decyl Glucoside
+101,Chemist at Play,Serum,749,Salicylic Acid|Cica|Niacinamide
+102,Chemist at Play,Moisturizer,649,Ceramides|Hyaluronic Acid|Vitamin E
+103,L'Oreal,Serum,999,Hyaluronic Acid|Glycerin
+104,L'Oreal,Cleanser,399,Glycolic Acid|Salicylic Acid
+105,Olay,Moisturizer,1599,Niacinamide|Peptides|Vitamin C
+106,Olay,Serum,1999,Retinol 24|Niacinamide
+107,Pond's,Cleanser,250,Vitamin C|Niacinamide
+108,Pond's,Moisturizer,300,Hyaluronic Acid|Vitamin E
+109,Garnier,Serum,549,Vitamin C|Salicylic Acid|Niacinamide
+110,Himalaya,Cleanser,150,Neem|Turmeric
+111,Himalaya,Mask,200,Neem|Fuller's Earth
+112,The Derma Co,Treatment,599,2% Salicylic Acid Mask|Kaolin Clay
+113,Minimalist,Sunscreen,599,SPF 50|Multi-Vitamin|Resveratrol
+114,Minimalist,Toner,499,PHA|Niacinamide|Salicylic Acid
+115,The Ordinary,Serum,1100,Granactive Retinoid 2%|Squalane
+116,The Ordinary,Moisturizer,800,Natural Moisturizing Factors|Hyaluronic Acid
+117,COSRX,Toner,1450,AHA|BHA|Vitamin C
+118,COSRX,Serum,1650,Propolis|Honey|Hyaluronic Acid
+119,Bioderma,Cleanser,1600,Atoderm Huile de Douche|Coco Glucoside
+120,Bioderma,Moisturizer,1400,Atoderm Intensive Baume|Ceramides
+121,Plum,Sunscreen,450,Rice Water|Niacinamide|SPF 50
+122,Plum,Moisturizer,550,2% Niacinamide|Rice Water
+123,Dot & Key,Serum,695,10% Vitamin C|Saffron|Licorice
+124,Dot & Key,Cleanser,395,Watermelon|Vitamin C|AHA
+125,Re'equil,Serum,695,0.1% Retinol|Matrixyl 3000
+126,Re'equil,Moisturizer,440,Ceramide|Hyaluronic Acid

@@ -29,7 +29,7 @@
 
     <div class="form-group">
       <label>Gender (affects hormones)</label>
-      <select id="gender">
+      <select id="gender" onchange="updateHormonalOptions()">
         <option value="">Select</option>
         <option>Female</option><option>Male</option><option>Non-binary</option><option>Prefer not to say</option>
       </select>
@@ -114,9 +114,9 @@
       <label>Monthly skincare budget (INR)</label>
       <select id="budget">
         <option value="">Select budget</option>
-        <option>Under ₹1500 (drugstore)</option><option>₹1500–₹4000 (mid-range)</option>
-        <option>₹4000–₹8000 (premium)</option><option>₹8000–₹16000 (luxury)</option>
-        <option>₹16000+ (ultra-premium)</option>
+        <option>Under ₹500 (Value)</option><option>₹500–₹1000 (Budget Friendly)</option>
+        <option>₹1000–₹2500 (Mid-range)</option><option>₹2500–₹5000 (Premium)</option>
+        <option>₹5000–₹10000 (High-end)</option><option>₹10000+ (Luxury)</option>
       </select>
     </div>
   </div>
@@ -138,11 +138,68 @@
       if (saved) {
         const d = JSON.parse(saved);
         fields.forEach(f => {
-            if (d[f]) document.getElementById(f).value = d[f];
+            if (d[f]) {
+                const el = document.getElementById(f);
+                if (el) {
+                    el.value = d[f];
+                    if (f === 'gender') updateHormonalOptions();
+                }
+            }
         });
+        // re-apply hormonal value after its options are populated
+        if (d.hormonal) document.getElementById('hormonal').value = d.hormonal;
       }
     } catch(e) {}
   };
+
+  const hormonalOptions = {
+    'Female': [
+      'Regular cycles, no issues',
+      'PCOS / hormonal acne',
+      'Pregnant / postpartum',
+      'Menopause / perimenopause',
+      'On hormonal contraception'
+    ],
+    'Male': [
+      'Balanced / Healthy',
+      'High Testosterone (potential oiliness)',
+      'Low Testosterone (potential dryness)',
+      'Stress-related hormonal spikes',
+      'Not applicable'
+    ],
+    'Non-binary': [
+      'Hormonal balance / Regular',
+      'Hormonal-related acne',
+      'Hormone Replacement Therapy (HRT)',
+      'Other / Fluctuating',
+      'Not applicable'
+    ],
+    'Prefer not to say': [
+      'Hormonal balance / Regular',
+      'Hormonal-related acne',
+      'Other / Fluctuating',
+      'Not applicable'
+    ]
+  };
+
+  function updateHormonalOptions() {
+    const gender = document.getElementById('gender').value;
+    const hormonalSelect = document.getElementById('hormonal');
+    const options = hormonalOptions[gender] || ['Select gender first'];
+    
+    const currentVal = hormonalSelect.value;
+    hormonalSelect.innerHTML = '<option value="">Select status</option>';
+    
+    options.forEach(opt => {
+      const o = document.createElement('option');
+      o.value = opt;
+      o.textContent = opt;
+      hormonalSelect.appendChild(o);
+    });
+
+    // Try to restore value if it still exists in the new list
+    if (currentVal) hormonalSelect.value = currentVal;
+  }
 
   function validate() {
     for (let f of fields) {
