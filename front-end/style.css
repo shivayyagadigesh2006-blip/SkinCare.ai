@@ -290,3 +290,62 @@ body {
   background: rgba(14, 121, 105, 0.15);
 }
 
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .app {
+    padding: 2rem 1.5rem;
+  }
+  .home-hero h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+  .app {
+    padding: 1.5rem 1rem;
+    border-radius: var(--border-radius-lg);
+  }
+  .home-hero {
+    padding-bottom: 2rem;
+  }
+  .home-hero h1 {
+    font-size: 24px;
+  }
+  .logo-ring {
+    width: 64px;
+    height: 64px;
+    font-size: 28px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .analyze-btn, .start-btn {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+  .result-section {
+    padding: 1.25rem;
+  }
+  .result-section h3 {
+    font-size: 18px;
+  }
+  .primary-suggestion {
+    padding: 20px 16px;
+  }
+  .why-reason {
+    padding: 12px;
+    font-size: 13px;
+  }
+  .metric-row {
+    gap: 8px;
+  }
+  .metric-chip {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
