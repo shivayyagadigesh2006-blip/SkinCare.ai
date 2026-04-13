@@ -10,7 +10,7 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 # Point static_folder to the front-end directory
 frontend_dir = os.path.join(base_dir, '../front-end')
 data_dir = os.path.join(base_dir, '../data')
-model_path = os.path.join(base_dir, 'model.pkl')
+model_path = os.path.join(base_dir, 'trained_skincare_model.joblib')
 
 app = Flask(__name__, static_folder=frontend_dir, static_url_path='')
 CORS(app)
