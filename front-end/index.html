@@ -3,45 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Skin Assistant</title>
+  <meta name="description" content="SkinCare.AI — Advanced algorithmic skincare formulation. Get bio-matched product recommendations tailored to your exact skin chemistry and environmental factors.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:title" content="The Skin Genome — AI-Powered Skincare Analysis">
+  <meta property="og:description" content="Get personalized skincare routines powered by machine learning. Matched to your biology, lifestyle, and budget.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+  <title>SkinCare AI | Clinical Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="app">
   <div class="home-hero">
-    <div class="logo-ring">🌿</div>
-    <h1>AI Skin Assistant</h1>
-    <p>Your personalized skincare advisor — powered by AI. Get science-backed recommendations tailored to your unique skin profile, lifestyle, and budget.</p>
+    <div class="logo-ring">🧬</div>
+    <h1>The Skin Genome</h1>
+    <p>Advanced algorithmic skincare formulation. Get bio-matched product recommendations tailored to your exact skin chemistry and environmental factors.</p>
+    <div class="trust-badges">
+      <div class="trust-item"><span class="trust-num">127+</span><span class="trust-label">Products Analyzed</span></div>
+      <div class="trust-item"><span class="trust-num">5</span><span class="trust-label">Skin Dimensions</span></div>
+      <div class="trust-item"><span class="trust-num">ML</span><span class="trust-label">Powered Engine</span></div>
+    </div>
   </div>
 
   <div class="feature-grid">
     <div class="feat-card">
+      <div class="feat-icon">🎯</div>
+      <div class="feat-title">Precision Analysis</div>
+      <div class="feat-desc">Predicting barrier disruption and inflammation via advanced algorithms.</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🔄</div>
+      <div class="feat-title">Skin Cycling Engine</div>
+      <div class="feat-desc">Dynamic 7-day schedules optimizing active ingredient absorption.</div>
+    </div>
+    <div class="feat-card">
       <div class="feat-icon">🔬</div>
-      <div class="feat-title">Skin analysis</div>
-      <div class="feat-desc">Predict acne, dryness, pigmentation & more based on your profile</div>
+      <div class="feat-title">Molecular Match</div>
+      <div class="feat-desc">Formulations matched to your skin's biological pH and lipid needs.</div>
     </div>
     <div class="feat-card">
-      <div class="feat-icon">✨</div>
-      <div class="feat-title">Custom routine</div>
-      <div class="feat-desc">Morning & night routines with specific product steps</div>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon">💸</div>
-      <div class="feat-title">Budget-aware</div>
-      <div class="feat-desc">Affordable to premium options matched to what you want to spend</div>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon">⚖️</div>
-      <div class="feat-title">Bias check</div>
-      <div class="feat-desc">Ensures recommendations are fair across all skin tones</div>
+      <div class="feat-icon">⏳</div>
+      <div class="feat-title">Predictive Timeline</div>
+      <div class="feat-desc">Track cellular turnover and estimate visible improvement phases.</div>
     </div>
   </div>
 
   <div style="text-align:center;">
-    <a href="form.html" class="start-btn">Start my skin analysis →</a>
+    <a href="form.html" class="start-btn" id="startAnalysis">Initiate Analysis →</a>
   </div>
 
-  <p class="disclaimer">⚠️ This tool provides general skincare education and is not a substitute for professional medical advice. Consult a dermatologist for serious skin conditions.</p>
+  <p class="disclaimer">⚠️ This tool provides algorithmic skincare matching and is not a substitute for clinical dermatological diagnosis.</p>
 </div>
+
+<style>
+.trust-badges { display: flex; justify-content: center; gap: 32px; margin-top: 2rem; animation: fadeIn 1.2s ease-out forwards; animation-delay: 0.5s; opacity: 0; }
+.trust-item { text-align: center; }
+.trust-num { display: block; font-family: var(--font-header); font-size: 28px; font-weight: 800; color: var(--color-primary); text-shadow: 0 0 15px var(--color-primary-glow); }
+.trust-label { font-size: 12px; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+</style>
 </body>
 </html>

@@ -3,226 +3,311 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Analyze Skin - AI Skin Assistant</title>
+  <meta name="description" content="Complete your biological skin profile for personalized AI-powered skincare recommendations.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+  <title>Biological Profiling - The Skin Genome</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="app">
-  <a href="index.html" class="back-btn">← Back</a>
-  <div class="progress-bar"><div class="progress-fill" style="width: 50%" id="progressBar"></div></div>
+  <a href="index.html" class="back-btn">← Terminate Session</a>
+  <div class="progress-bar"><div class="progress-fill" id="progressBar" style="width:0%"></div></div>
 
   <div class="form-header">
-    <h2>Tell us about your skin</h2>
-    <p>Answer honestly — the more detail you give, the better your analysis.</p>
+    <h2>Biological Profiling</h2>
+    <p>Input your baseline metrics to initialize the algorithmic match process.</p>
   </div>
 
   <div class="form-grid">
     <span class="section-title">About you</span>
 
-    <div class="form-group">
-      <label>Age range</label>
-      <select id="age">
+    <div class="form-group" id="group-age">
+      <label for="age">Age range</label>
+      <select id="age" onchange="onFieldChange()">
         <option value="">Select age range</option>
         <option>13–17</option><option>18–24</option><option>25–34</option>
         <option>35–44</option><option>45–54</option><option>55+</option>
       </select>
+      <div class="field-error">Please select your age range</div>
     </div>
 
-    <div class="form-group">
-      <label>Gender (affects hormones)</label>
-      <select id="gender" onchange="updateHormonalOptions()">
+    <div class="form-group" id="group-gender">
+      <label for="gender">Gender (affects hormones)</label>
+      <select id="gender" onchange="updateHormonalOptions(); onFieldChange()">
         <option value="">Select</option>
         <option>Female</option><option>Male</option><option>Non-binary</option><option>Prefer not to say</option>
       </select>
+      <div class="field-error">Please select your gender</div>
     </div>
 
     <span class="section-title">Your skin</span>
 
-    <div class="form-group">
-      <label>Skin type</label>
-      <select id="skinType">
+    <div class="form-group" id="group-skinType">
+      <label for="skinType">Skin type</label>
+      <select id="skinType" onchange="onFieldChange()">
         <option value="">Select skin type</option>
         <option>Oily</option><option>Dry</option><option>Combination</option>
         <option>Normal</option><option>Sensitive</option>
       </select>
+      <div class="field-error">Please select your skin type</div>
     </div>
 
-    <div class="form-group">
-      <label>Skin tone</label>
-      <select id="skinTone">
+    <div class="form-group" id="group-skinTone">
+      <label for="skinTone">Skin tone</label>
+      <select id="skinTone" onchange="onFieldChange()">
         <option value="">Select skin tone</option>
         <option>Very fair (Type I)</option><option>Fair (Type II)</option>
         <option>Medium (Type III)</option><option>Olive (Type IV)</option>
         <option>Brown (Type V)</option><option>Deep (Type VI)</option>
       </select>
+      <div class="field-error">Please select your skin tone</div>
     </div>
 
-    <div class="form-group full">
-      <label>Main skin concerns (select all that apply)</label>
-      <select id="concerns">
-        <option value="">Select primary concern</option>
-        <option>Acne / breakouts</option><option>Dryness / flakiness</option>
-        <option>Oiliness / shine</option><option>Pigmentation / dark spots</option>
-        <option>Anti-aging / wrinkles</option><option>Redness / rosacea</option>
-        <option>Uneven texture</option><option>Dullness</option>
-      </select>
+    <span class="section-title">Main skin concerns (select all that apply)</span>
+    <div class="concern-pills" id="concernPills">
+      <div class="concern-pill" tabindex="0" data-value="Acne / breakouts" onclick="toggleConcern(this)" onkeydown="if(event.key==='Enter')toggleConcern(this)">
+        <div class="pill-check"></div><span>Acne / breakouts</span>
+      </div>
+      <div class="concern-pill" tabindex="0" data-value="Dryness / flakiness" onclick="toggleConcern(this)" onkeydown="if(event.key==='Enter')toggleConcern(this)">
+        <div class="pill-check"></div><span>Dryness / flakiness</span>
+      </div>
+      <div class="concern-pill" tabindex="0" data-value="Oiliness / shine" onclick="toggleConcern(this)" onkeydown="if(event.key==='Enter')toggleConcern(this)">
+        <div class="pill-check"></div><span>Oiliness / shine</span>
+      </div>
+      <div class="concern-pill" tabindex="0" data-value="Pigmentation / dark spots" onclick="toggleConcern(this)" onkeydown="if(event.key==='Enter')toggleConcern(this)">
+        <div class="pill-check"></div><span>Pigmentation / dark spots</span>
+      </div>
+      <div class="concern-pill" tabindex="0" data-value="Anti-aging / wrinkles" onclick="toggleConcern(this)" onkeydown="if(event.key==='Enter')toggleConcern(this)">
+        <div class="pill-check"></div><span>Anti-aging / wrinkles</span>
+      </div>
+      <div class="concern-pill" tabindex="0" data-value="Redness / rosacea" onclick="toggleConcern(this)" onkeydown="if(event.key==='Enter')toggleConcern(this)">
+        <div class="pill-check"></div><span>Redness / rosacea</span>
+      </div>
+      <div class="concern-pill" tabindex="0" data-value="Uneven texture" onclick="toggleConcern(this)" onkeydown="if(event.key==='Enter')toggleConcern(this)">
+        <div class="pill-check"></div><span>Uneven texture</span>
+      </div>
+      <div class="concern-pill" tabindex="0" data-value="Dullness" onclick="toggleConcern(this)" onkeydown="if(event.key==='Enter')toggleConcern(this)">
+        <div class="pill-check"></div><span>Dullness</span>
+      </div>
     </div>
+    <div class="concern-error" id="concernError">Please select at least one skin concern</div>
 
     <span class="section-title">Lifestyle & environment</span>
 
-    <div class="form-group">
-      <label>Diet type</label>
-      <select id="diet">
+    <div class="form-group" id="group-diet">
+      <label for="diet">Diet type</label>
+      <select id="diet" onchange="onFieldChange()">
         <option value="">Select diet</option>
         <option>Balanced / healthy</option><option>High sugar / processed</option>
         <option>Dairy-heavy</option><option>Plant-based / vegan</option>
         <option>High protein / gym-focused</option>
       </select>
+      <div class="field-error">Please select your diet type</div>
     </div>
 
-    <div class="form-group">
-      <label>Climate you live in</label>
-      <select id="climate">
+    <div class="form-group" id="group-climate">
+      <label for="climate">Climate you live in</label>
+      <select id="climate" onchange="onFieldChange()">
         <option value="">Select climate</option>
         <option>Hot & humid</option><option>Hot & dry</option>
         <option>Temperate / mild</option><option>Cold & dry</option>
         <option>Tropical</option>
       </select>
+      <div class="field-error">Please select your climate</div>
     </div>
 
-    <div class="form-group">
-      <label>Hormonal status</label>
-      <select id="hormonal">
+    <div class="form-group" id="group-hormonal">
+      <label for="hormonal">Hormonal status</label>
+      <select id="hormonal" onchange="onFieldChange()">
         <option value="">Select status</option>
         <option>Regular cycles, no issues</option><option>PCOS / hormonal acne</option>
         <option>Pregnant / postpartum</option><option>Menopause / perimenopause</option>
         <option>On hormonal contraception</option><option>Not applicable</option>
       </select>
+      <div class="field-error">Please select hormonal status</div>
     </div>
 
-    <div class="form-group">
-      <label>Water intake</label>
-      <select id="water">
+    <div class="form-group" id="group-water">
+      <label for="water">Water intake</label>
+      <select id="water" onchange="onFieldChange()">
         <option value="">Select</option>
         <option>Less than 1L/day</option><option>1–2L/day</option>
         <option>2–3L/day</option><option>3L+ per day</option>
       </select>
+      <div class="field-error">Please select your water intake</div>
     </div>
 
     <span class="section-title">Skincare budget</span>
 
-    <div class="form-group full">
-      <label>Monthly skincare budget (INR)</label>
-      <select id="budget">
+    <div class="form-group full" id="group-budget">
+      <label for="budget">Monthly skincare budget (INR)</label>
+      <select id="budget" onchange="onFieldChange()">
         <option value="">Select budget</option>
         <option>Under ₹500 (Value)</option><option>₹500–₹1000 (Budget Friendly)</option>
         <option>₹1000–₹2500 (Mid-range)</option><option>₹2500–₹5000 (Premium)</option>
         <option>₹5000–₹10000 (High-end)</option><option>₹10000+ (Luxury)</option>
       </select>
+      <div class="field-error">Please select your budget</div>
+    </div>
+
+    <!-- Live Preview -->
+    <div class="live-preview" id="livePreview" style="display:none;">
+      <div class="live-preview-title">📋 Your Profile Summary</div>
+      <div class="live-preview-content" id="previewContent"></div>
     </div>
   </div>
 
-  <div class="error-msg" id="errorMsg">Please fill in all fields before analyzing.</div>
+  <div class="error-msg" id="errorMsg"></div>
 
-  <button class="analyze-btn" id="analyzeBtn" onclick="runAnalysis()">Analyze my skin →</button>
+  <button class="analyze-btn" id="analyzeBtn" onclick="runAnalysis()">Initialize Sequence →</button>
 
-  <p class="disclaimer" style="text-align:left; margin-top:1rem;">⚠️ Not medical advice. Consult a dermatologist for serious conditions.</p>
+  <p class="disclaimer" style="text-align:left; margin-top:1rem;">⚠️ Algorithmic matching only. Consult a clinical dermatologist for medical diagnosis.</p>
 </div>
 
 <script>
-  const fields = ['age','gender','skinType','skinTone','concerns','diet','climate','hormonal','water','budget'];
-  
-  // optionally load draft payload if they pressed back
+  const selectFields = ['age','gender','skinType','skinTone','diet','climate','hormonal','water','budget'];
+  const allFields = [...selectFields, 'concerns'];
+  let selectedConcerns = [];
+
+  // --- Load saved data ---
   window.onload = () => {
     try {
       const saved = sessionStorage.getItem('skin_userdata');
       if (saved) {
         const d = JSON.parse(saved);
-        fields.forEach(f => {
-            if (d[f]) {
-                const el = document.getElementById(f);
-                if (el) {
-                    el.value = d[f];
-                    if (f === 'gender') updateHormonalOptions();
-                }
-            }
+        selectFields.forEach(f => {
+          if (d[f]) {
+            const el = document.getElementById(f);
+            if (el) { el.value = d[f]; if (f === 'gender') updateHormonalOptions(); }
+          }
         });
-        // re-apply hormonal value after its options are populated
         if (d.hormonal) document.getElementById('hormonal').value = d.hormonal;
+        if (d.concerns) {
+          const concerns = d.concerns.split(', ').filter(Boolean);
+          document.querySelectorAll('.concern-pill').forEach(pill => {
+            if (concerns.includes(pill.dataset.value)) { pill.classList.add('active'); pill.querySelector('.pill-check').textContent = '✓'; selectedConcerns.push(pill.dataset.value); }
+          });
+        }
       }
     } catch(e) {}
+    updateProgress();
+    updatePreview();
   };
 
+  // --- Concern pills ---
+  function toggleConcern(el) {
+    const val = el.dataset.value;
+    const check = el.querySelector('.pill-check');
+    if (el.classList.contains('active')) {
+      el.classList.remove('active');
+      check.textContent = '';
+      selectedConcerns = selectedConcerns.filter(c => c !== val);
+    } else {
+      el.classList.add('active');
+      check.textContent = '✓';
+      selectedConcerns.push(val);
+    }
+    document.getElementById('concernError').classList.toggle('visible', selectedConcerns.length === 0);
+    onFieldChange();
+  }
+
+  // --- Hormonal options by gender ---
   const hormonalOptions = {
-    'Female': [
-      'Regular cycles, no issues',
-      'PCOS / hormonal acne',
-      'Pregnant / postpartum',
-      'Menopause / perimenopause',
-      'On hormonal contraception'
-    ],
-    'Male': [
-      'Balanced / Healthy',
-      'High Testosterone (potential oiliness)',
-      'Low Testosterone (potential dryness)',
-      'Stress-related hormonal spikes',
-      'Not applicable'
-    ],
-    'Non-binary': [
-      'Hormonal balance / Regular',
-      'Hormonal-related acne',
-      'Hormone Replacement Therapy (HRT)',
-      'Other / Fluctuating',
-      'Not applicable'
-    ],
-    'Prefer not to say': [
-      'Hormonal balance / Regular',
-      'Hormonal-related acne',
-      'Other / Fluctuating',
-      'Not applicable'
-    ]
+    'Female': ['Regular cycles, no issues','PCOS / hormonal acne','Pregnant / postpartum','Menopause / perimenopause','On hormonal contraception'],
+    'Male': ['Balanced / Healthy','High Testosterone (potential oiliness)','Low Testosterone (potential dryness)','Stress-related hormonal spikes','Not applicable'],
+    'Non-binary': ['Hormonal balance / Regular','Hormonal-related acne','Hormone Replacement Therapy (HRT)','Other / Fluctuating','Not applicable'],
+    'Prefer not to say': ['Hormonal balance / Regular','Hormonal-related acne','Other / Fluctuating','Not applicable']
   };
 
   function updateHormonalOptions() {
     const gender = document.getElementById('gender').value;
-    const hormonalSelect = document.getElementById('hormonal');
-    const options = hormonalOptions[gender] || ['Select gender first'];
-    
-    const currentVal = hormonalSelect.value;
-    hormonalSelect.innerHTML = '<option value="">Select status</option>';
-    
-    options.forEach(opt => {
+    const sel = document.getElementById('hormonal');
+    const cur = sel.value;
+    sel.innerHTML = '<option value="">Select status</option>';
+    (hormonalOptions[gender] || []).forEach(opt => {
       const o = document.createElement('option');
-      o.value = opt;
-      o.textContent = opt;
-      hormonalSelect.appendChild(o);
+      o.value = opt; o.textContent = opt; sel.appendChild(o);
     });
-
-    // Try to restore value if it still exists in the new list
-    if (currentVal) hormonalSelect.value = currentVal;
+    if (cur) sel.value = cur;
   }
 
-  function validate() {
-    for (let f of fields) {
-      if (!document.getElementById(f).value) return false;
+  // --- Validation ---
+  function validate(showErrors) {
+    let valid = true;
+    selectFields.forEach(f => {
+      const group = document.getElementById('group-' + f);
+      const val = document.getElementById(f).value;
+      if (!val) {
+        if (showErrors) group.classList.add('has-error');
+        valid = false;
+      } else {
+        group.classList.remove('has-error');
+      }
+    });
+    if (selectedConcerns.length === 0) {
+      if (showErrors) document.getElementById('concernError').classList.add('visible');
+      valid = false;
+    } else {
+      document.getElementById('concernError').classList.remove('visible');
     }
-    return true;
+    return valid;
   }
 
+  // --- Progress & Preview ---
+  function onFieldChange() {
+    updateProgress();
+    updatePreview();
+  }
+
+  function updateProgress() {
+    let filled = 0;
+    selectFields.forEach(f => { if (document.getElementById(f).value) filled++; });
+    if (selectedConcerns.length > 0) filled++;
+    const pct = Math.round((filled / allFields.length) * 100);
+    document.getElementById('progressBar').style.width = pct + '%';
+  }
+
+  function updatePreview() {
+    const age = document.getElementById('age').value;
+    const skin = document.getElementById('skinType').value;
+    const tone = document.getElementById('skinTone').value;
+    const climate = document.getElementById('climate').value;
+    const budget = document.getElementById('budget').value;
+    const concerns = selectedConcerns.join(', ');
+
+    const parts = [];
+    if (age) parts.push(`<strong>${age}</strong> years`);
+    if (skin) parts.push(`<strong>${skin}</strong> skin`);
+    if (tone) parts.push(`<strong>${tone}</strong>`);
+    if (concerns) parts.push(`Concerns: <strong>${concerns}</strong>`);
+    if (climate) parts.push(`<strong>${climate}</strong> climate`);
+    if (budget) parts.push(`Budget: <strong>${budget}</strong>`);
+
+    const preview = document.getElementById('livePreview');
+    if (parts.length > 0) {
+      preview.style.display = 'block';
+      document.getElementById('previewContent').innerHTML = parts.join(' · ');
+    } else {
+      preview.style.display = 'none';
+    }
+  }
+
+  // --- Submit ---
   function getFormData() {
     const d = {};
-    fields.forEach(f => d[f] = document.getElementById(f).value);
+    selectFields.forEach(f => d[f] = document.getElementById(f).value);
+    d.concerns = selectedConcerns.join(', ');
     return d;
   }
 
   function runAnalysis() {
     const err = document.getElementById('errorMsg');
-    if (!validate()) { 
-        err.classList.add('visible'); 
-        return; 
+    if (!validate(true)) {
+      err.textContent = 'Please complete all required fields before proceeding.';
+      err.classList.add('visible');
+      return;
     }
     err.classList.remove('visible');
-
     const userData = getFormData();
     sessionStorage.setItem('skin_userdata', JSON.stringify(userData));
     window.location.href = 'results.html';

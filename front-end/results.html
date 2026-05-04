@@ -3,140 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Results - AI Skin Assistant</title>
+  <meta name="description" content="Your personalized AI skincare analysis results — severity metrics, tailored routine, and product recommendations.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+  <title>Clinical Report - The Skin Genome</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="app">
-  <a href="form.html" class="back-btn">← Edit profile</a>
+  <a href="form.html" class="back-btn">← Recalibrate Variables</a>
 
   <div class="results-header">
-    <h2>Your skin report</h2>
-    <p id="userSummaryLine" style="font-size:14px; color:var(--color-text-secondary); margin-top:4px;"></p>
+    <h2>Clinical Dashboard</h2>
+    <p id="userSummaryLine" style="font-size:14px; color:var(--color-text-dim); margin-top:4px;"></p>
   </div>
 
-  <div class="loading-state" id="loadingState">
-    <div class="spinner"></div>
-    <p>Analyzing your skin profile...</p>
+  <!-- Loading State with Skeleton -->
+  <div id="loadingState">
+    <div style="text-align:center; margin-bottom:2rem;">
+      <div class="spinner"></div>
+      <p style="color:var(--color-primary); font-size:18px; font-family:var(--font-header); font-weight:700; letter-spacing:0.1em; text-transform:uppercase; animation:pulse 2s infinite;">Processing Biological Data...</p>
+    </div>
+    <div class="skeleton-container">
+      <div class="skeleton-block"><div class="skeleton-line h24 w60"></div><div class="skeleton-line w80"></div><div class="skeleton-line w40"></div></div>
+      <div class="skeleton-block"><div class="skeleton-line h24 w40"></div><div class="skeleton-line w80"></div><div class="skeleton-line w60"></div><div class="skeleton-line w80"></div></div>
+    </div>
   </div>
-  
+
   <div class="error-msg" id="errorMsg" style="margin-bottom: 2rem;"></div>
 
   <div class="result-content" id="resultContent">
 
     <div class="result-section" id="analysisSection">
-      <span class="section-badge badge-analysis">Skin analysis</span>
-      <h3>Your skin assessment</h3>
-      <div class="metric-row" id="metricRow"></div>
+      <span class="section-badge badge-analysis">Diagnostics</span>
+      <h3>Baseline Assessment</h3>
+      <div class="severity-bars" id="severityBars"></div>
       <div class="result-body" id="analysisBody"></div>
     </div>
 
     <div class="result-section" id="routineSection">
-      <span class="section-badge badge-routine">Personalized routine</span>
-      <h3>Your custom skincare routine</h3>
+      <span class="section-badge badge-routine">Protocol</span>
+      <h3>Algorithmic Formulation</h3>
       <div class="result-body" id="routineBody"></div>
     </div>
 
     <div class="result-section" id="explainSection">
-      <span class="section-badge badge-explain">Why this?</span>
-      <h3>Science behind your results</h3>
+      <span class="section-badge badge-explain">Molecular Data</span>
+      <h3>Biochemical Rationale</h3>
       <div class="result-body" id="explainBody"></div>
     </div>
 
     <div class="result-section" id="tipsSection">
-      <span class="section-badge badge-tips">Lifestyle tips</span>
-      <h3>Habits to support your skin</h3>
+      <span class="section-badge badge-tips">Optimization</span>
+      <h3>Environmental Synergies</h3>
       <div class="result-body" id="tipsBody"></div>
     </div>
 
     <div class="result-section" id="fairnessSection">
-      <span class="section-badge badge-fairness">Fairness check</span>
-      <h3>Bias & equity review</h3>
+      <span class="section-badge badge-fairness">Validation</span>
+      <h3>Algorithmic Equity Check</h3>
       <div class="result-body" id="fairnessBody"></div>
     </div>
 
-    <p class="disclaimer" style="text-align:center; margin-top:1rem;">⚠️ These recommendations are educational. Always consult a dermatologist for medical skin concerns.</p>
+    <p class="disclaimer" style="text-align:center; margin-top:1rem;">⚠️ Algorithmic matching only. Consult a clinical dermatologist for medical diagnosis.</p>
 
-    <a href="index.html" class="restart-btn">Start a new analysis</a>
+    <div style="display:flex; gap:12px; margin-top:2rem;">
+      <button class="restart-btn" style="flex:1;" onclick="window.print()">🖨️ Print Report</button>
+      <a href="index.html" class="restart-btn" style="flex:1;">Initialize New Session</a>
+    </div>
   </div>
 </div>
 
 <script>
-  function setMetrics(acne, dry, pigment, aging, sensitivity) {
-    const row = document.getElementById('metricRow');
-    const metrics = [
-      { label: 'Acne', value: acne },
-      { label: 'Dryness', value: dry },
-      { label: 'Pigmentation', value: pigment },
-      { label: 'Aging risk', value: aging },
-      { label: 'Sensitivity', value: sensitivity }
+  function setSeverityBars(metrics) {
+    const container = document.getElementById('severityBars');
+    const items = [
+      { label: 'Acne', level: metrics.acne, pct: metrics.acne_pct },
+      { label: 'Dryness', level: metrics.dryness, pct: metrics.dryness_pct },
+      { label: 'Pigmentation', level: metrics.pigmentation, pct: metrics.pigmentation_pct },
+      { label: 'Aging Risk', level: metrics.aging, pct: metrics.aging_pct },
+      { label: 'Sensitivity', level: metrics.sensitivity, pct: metrics.sensitivity_pct }
     ];
-    row.innerHTML = metrics.map(m => {
-      const level = String(m.value).toLowerCase();
-      const dot = level.includes('high') ? 'dot-high' : level.includes('mid') || level.includes('moderate') ? 'dot-mid' : 'dot-low';
-      return `<div class="metric-chip"><div class="metric-dot ${dot}"></div><span>${m.label}: <strong>${m.value}</strong></span></div>`;
+
+    container.innerHTML = items.map(m => {
+      const lvl = String(m.level).toLowerCase();
+      const cls = lvl.includes('high') ? 'high' : (lvl.includes('mod') ? 'moderate' : 'low');
+      const pct = m.pct || 0;
+      return `<div class="severity-bar-item">
+        <span class="severity-label">${m.label}</span>
+        <div class="severity-track"><div class="severity-fill ${cls}" data-width="${pct}"></div></div>
+        <span class="severity-value ${cls}">${m.level}</span>
+      </div>`;
     }).join('');
+
+    // Animate bars after a short delay
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        document.querySelectorAll('.severity-fill').forEach(bar => {
+          bar.style.width = bar.dataset.width + '%';
+        });
+      }, 200);
+    });
+  }
+
+  const brands = ["Minimalist","The Ordinary","The Derma Co","Dot & Key","CeraVe","Cetaphil","Neutrogena","Plum","Mamaearth","Deconstruct","Re'equil","Innisfree","Benton","LANEIGE","Paula's Choice","Dr. Sheth's","Kiehl's","Cosrx","Simple","Biotique","Forest Essentials","Kama Ayurveda","Fixderma","La Shield","Bioderma","Sebamed","Clinique"];
+
+  function parseMarkdown(text) {
+    if (!text) return "";
+    return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>');
+  }
+
+  function highlightBrands(text) {
+    if (!text) return "";
+    let out = text;
+    brands.forEach(b => { out = out.replace(new RegExp(`\\b${b.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'g'), `<span class="brand-highlight">${b}</span>`); });
+    return out;
+  }
+
+  function formatText(text) { return highlightBrands(parseMarkdown(text)); }
+
+  async function fetchAnalysis(userData, retryCount) {
+    const response = await fetch('/analyze', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(userData)
+    });
+
+    if (!response.ok) {
+      const errData = await response.json().catch(() => ({}));
+      if (errData.field_errors) {
+        throw new Error('Validation failed: ' + Object.values(errData.field_errors).join(', '));
+      }
+      if (retryCount > 0) {
+        await new Promise(r => setTimeout(r, 1500));
+        return fetchAnalysis(userData, retryCount - 1);
+      }
+      throw new Error(errData.error || 'Server error');
+    }
+    return response.json();
   }
 
   async function loadResults() {
     const err = document.getElementById('errorMsg');
     const saved = sessionStorage.getItem('skin_userdata');
-    
+
     if (!saved) {
-        document.getElementById('loadingState').style.display = 'none';
-        err.textContent = "No profile data found. Please return to the form and submit your profile.";
-        err.classList.add('visible');
-        return;
+      document.getElementById('loadingState').style.display = 'none';
+      err.textContent = "No profile data found. Please return to the form and submit your profile.";
+      err.classList.add('visible');
+      return;
     }
 
     const userData = JSON.parse(saved);
-    
-    document.getElementById('userSummaryLine').textContent =
-      `${userData.age} · ${userData.skinType} skin · ${userData.skinTone} · ${userData.climate} climate · Budget: ${userData.budget}`;
-
-    const brands = ["Minimalist", "The Ordinary", "The Derma Co", "Dot & Key", "CeraVe", "Cetaphil", "Neutrogena", "Plum", "Mamaearth", "Deconstruct", "Re'equil", "Innisfree", "Benton", "LANEIGE", "Paula's Choice", "Dr. Sheth's", "Kiehl's", "Cosrx", "Simple", "Biotique", "Forest Essentials", "Kama Ayurveda", "Fixderma", "La Shield", "Bioderma", "Sebamed", "Clinique"];
-    function highlightBrands(text) {
-      if (!text) return "";
-      let highlighted = text;
-      brands.forEach(brand => {
-        const regex = new RegExp(`\\b${brand}\\b`, 'g');
-        highlighted = highlighted.replace(regex, `<span class="brand-highlight">${brand}</span>`);
-      });
-      return highlighted;
-    }
+    const summary = [userData.age, userData.skinType + ' skin', userData.skinTone, userData.climate + ' climate', 'Budget: ' + userData.budget].filter(Boolean);
+    document.getElementById('userSummaryLine').textContent = summary.join(' · ');
 
     try {
-      const response = await fetch('/analyze', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(userData)
-      });
+      const parsed = await fetchAnalysis(userData, 1);
 
-      if (!response.ok) {
-          throw new Error('Network response was not ok');
-      }
-
-      const parsed = await response.json();
-
-      setMetrics(
-        parsed.metrics.acne,
-        parsed.metrics.dryness,
-        parsed.metrics.pigmentation,
-        parsed.metrics.aging,
-        parsed.metrics.sensitivity
-      );
-
-      document.getElementById('analysisBody').innerHTML = highlightBrands(parsed.analysis);
-      document.getElementById('routineBody').innerHTML = highlightBrands(parsed.routine);
-      document.getElementById('explainBody').innerHTML = highlightBrands(parsed.explanation);
-      document.getElementById('tipsBody').innerHTML = highlightBrands(parsed.tips);
-      document.getElementById('fairnessBody').innerHTML = highlightBrands(parsed.fairness);
+      setSeverityBars(parsed.metrics);
+      document.getElementById('analysisBody').innerHTML = formatText(parsed.analysis);
+      document.getElementById('routineBody').innerHTML = parsed.routine;
+      document.getElementById('explainBody').innerHTML = formatText(parsed.explanation);
+      document.getElementById('tipsBody').innerHTML = formatText(parsed.tips);
+      document.getElementById('fairnessBody').innerHTML = formatText(parsed.fairness);
 
       document.getElementById('loadingState').style.display = 'none';
       document.getElementById('resultContent').classList.add('visible');
 
     } catch (e) {
-      document.getElementById('loadingState').innerHTML = '<p style="color:var(--color-text-danger,#A32D2D)">Something went wrong communicating with the server. Please ensure the backend is running.</p>';
+      document.getElementById('loadingState').style.display = 'none';
+      err.textContent = e.message || 'Something went wrong communicating with the server. Please ensure the backend is running.';
+      err.classList.add('visible');
     }
   }
 
